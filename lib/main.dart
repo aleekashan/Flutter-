@@ -73,12 +73,13 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text('Flutter Container'),
       ),
-      body: OutlinedButton(
-    child: Text('Hello'),
-    onPressed: (){
-      print('Helloooooo');
-    }
-    )
+      body: Center(
+        child: Container(
+            width: 100,
+            height: 100,
+            child: Image.asset('assets/images/cera.jpg')) ,
+      )
+
 
 
     );

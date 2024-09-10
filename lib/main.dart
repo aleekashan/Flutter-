@@ -46,38 +46,42 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text('Flutter Container'),
         ),
-        body: Center(
-          child: InkWell(
-            onTap: () {
-              print('Clicked');
-            },
-            onDoubleTap: () {
-              print('Double tapped');
-            },
-            onLongPress: () {
-              print('Long pressed');
-            },
-            child: Container(
-              width: 200,
-              height: 200,
-              color: Colors.amber,
-              child: Center(
-                  child: InkWell(
-                    onTap:(){
-                      print('Text here clicked');
-                    },
-                      onLongPress: (){
-                      print('Text here long pressed');
-                      },
-                      onDoubleTap: (){
-                      print('Text here Double tapped');
-                      },
-                      child: Text(
-                "Text here",
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.w800),
-              ))),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.amber,
+                ),
+                Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.red,
+                ),
+                Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.blue,
+                ),
+                Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.green,
+                ),
+                Container(
+                  height: 200,
+                  width: 200,
+                  color: Colors.redAccent,
+                )
+            
+            
+              ],
             ),
           ),
-        ));
+        ),
+    );
   }
 }

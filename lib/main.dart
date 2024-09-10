@@ -42,29 +42,42 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Flutter Container'),
-      ),
-      body: Center(
-        child: InkWell(
-          onTap: (){
-            print('Clicked');
-
-          },
-          onDoubleTap: (){
-            print('Double tapped');
-          },
-          onLongPress: (){
-            print('Long pressed');
-          },
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.amber,
-          ),
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text('Flutter Container'),
         ),
-      )
-    );
+        body: Center(
+          child: InkWell(
+            onTap: () {
+              print('Clicked');
+            },
+            onDoubleTap: () {
+              print('Double tapped');
+            },
+            onLongPress: () {
+              print('Long pressed');
+            },
+            child: Container(
+              width: 200,
+              height: 200,
+              color: Colors.amber,
+              child: Center(
+                  child: InkWell(
+                    onTap:(){
+                      print('Text here clicked');
+                    },
+                      onLongPress: (){
+                      print('Text here long pressed');
+                      },
+                      onDoubleTap: (){
+                      print('Text here Double tapped');
+                      },
+                      child: Text(
+                "Text here",
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.w800),
+              ))),
+            ),
+          ),
+        ));
   }
 }
